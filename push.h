@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:16:04 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/08 14:18:44 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/09 01:47:26 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	is_sorted(t_list **stack);
 int	ft_lstsize(t_list *head);
 void radix_sort(t_list **stack_a, t_list **stack_b);
 void simple_sort(t_list **stack_a, t_list **stack_b);
+int	get_distance(t_list **stack, int index);
+void	attribution_index(t_list **stack);
 
 int	ft_atoi(const char *str);
 char	**ft_split(char const *str, char c);

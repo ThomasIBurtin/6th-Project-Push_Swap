@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:52:33 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/08 14:08:10 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/09 00:59:44 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,21 @@ int	is_sorted(t_list **stack)
 		head = head->suivant;
 	}
 	return (1);
+}
+
+int	get_distance(t_list **stack, int index)
+{
+	t_list	*head;
+	int		distance;
+
+	distance = 0;
+	head = *stack;
+	while (head)
+	{
+		if (head->index == index)
+			break ;
+		distance++;
+		head = head->suivant;
+	}
+	return (distance);
 }

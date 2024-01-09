@@ -1,15 +1,15 @@
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra
-SRC = algo.c \
-      commande.c \
-      fonc_rotation_algo.c \
+SRC = commande.c \
+      ft_check_args.c \
+      ft_split.c \
       ft_atoi.c \
       push.c \
-      sort_a_b.c \
-      sort_final.c \
-      tools_algo.c \
-      ft_split.c \
-      tools.c
+      radix_sort.c \
+      simple_sort.c \
+      tools.c \
+      attribution_index.c \
+      utils.c
 OBJ = $(SRC:.c=.o)
 NAME = push_swap
 
@@ -19,7 +19,7 @@ $(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC)  -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

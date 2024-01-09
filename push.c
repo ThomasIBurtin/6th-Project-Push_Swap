@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:59:24 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/08 14:18:13 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/09 01:50:01 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void	initStack(t_list **stack, int argc, char **argv)
 		i = 1;
 		args = argv;
 	}
-	while (args[i])
+	while (args[i] != NULL)
 	{
 		new = ft_lstnew(ft_atoi(args[i]));
 		ft_lstadd_back(stack, new);
 		i++;
 	}
-	// fonc index a faire
+	attribution_index(stack);
 	if (argc == 2)
 		ft_free(args);
 }
@@ -65,6 +65,7 @@ int	main(int argc, char *argv[])
 		return (0);
 	}
 	sort_stack(stack_a, stack_b);
+	printList(*stack_a);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);
