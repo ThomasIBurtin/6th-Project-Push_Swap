@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:16:04 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/09 01:47:26 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/09 13:55:18 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ typedef struct s_list
 }t_list;
 
 
-void	s(t_list **premiere_case);
-void	p(t_list **premiere_case_a, t_list **premiere_case_b);
-void	r(t_list **premiere_case);
-void	rr(t_list **premiere_case);
+void	s(t_list **premiere_case, char c);
+void	p(t_list **premiere_case_a, t_list **premiere_case_b, char c);
+void	r(t_list **premiere_case, char c);
+void	rr(t_list **premiere_case, char c);
 
 void	ft_check_args(int argc, char **argv);
 void ft_error(char *message);
