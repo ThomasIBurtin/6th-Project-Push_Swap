@@ -6,7 +6,7 @@
 /*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:37:23 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/10 15:26:48 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/10 15:45:41 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
+	int		i;
+	int		neg;
 	long	res;
 
 	i = 0;

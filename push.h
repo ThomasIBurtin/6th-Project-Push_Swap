@@ -6,7 +6,7 @@
 /*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:16:04 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/10 15:27:12 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/10 15:45:07 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		get_distance(t_list **stack, int index);
 void	attribution_index(t_list **stack);
 void	part2_sort_3(t_list **stack_a, t_list *head, int min);
 
-long		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 char	**ft_split(char const *str, char c);
 
 #endif
