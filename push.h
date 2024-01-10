@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:16:04 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/09 13:55:18 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 15:27:12 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,27 @@ typedef struct s_list
 	struct s_list	*suivant;
 }t_list;
 
-
 void	s(t_list **premiere_case, char c);
 void	p(t_list **premiere_case_a, t_list **premiere_case_b, char c);
 void	r(t_list **premiere_case, char c);
 void	rr(t_list **premiere_case, char c);
 
 void	ft_check_args(int argc, char **argv);
-void ft_error(char *message);
+void	ft_error(char *message);
 void	ft_free(char **str);
-void free_stack(t_list **stack);
+void	free_stack(t_list **stack);
 void	ft_lstadd_back(t_list **stack, t_list *new);
 t_list	*ft_lstnew(int value);
 t_list	*ft_lstlast(t_list *head);
-void	printList(t_list *head);
-int	is_sorted(t_list **stack);
-int	ft_lstsize(t_list *head);
-void radix_sort(t_list **stack_a, t_list **stack_b);
-void simple_sort(t_list **stack_a, t_list **stack_b);
-int	get_distance(t_list **stack, int index);
+int		is_sorted(t_list **stack);
+int		ft_lstsize(t_list *head);
+void	radix_sort(t_list **stack_a, t_list **stack_b);
+void	simple_sort(t_list **stack_a, t_list **stack_b);
+int		get_distance(t_list **stack, int index);
 void	attribution_index(t_list **stack);
+void	part2_sort_3(t_list **stack_a, t_list *head, int min);
 
-int	ft_atoi(const char *str);
+long		ft_atoi(const char *str);
 char	**ft_split(char const *str, char c);
 
 #endif

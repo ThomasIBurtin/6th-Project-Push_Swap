@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:59:24 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/09 13:16:59 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 14:29:45 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
-void	initStack(t_list **stack, int argc, char **argv)
+void	initstack(t_list **stack, int argc, char **argv)
 {
 	t_list	*new;
 	char	**args;
@@ -47,17 +47,17 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 
 int	main(int argc, char *argv[])
 {
-	t_list **stack_a;
-	t_list **stack_b;
+	t_list	**stack_a;
+	t_list	**stack_b;
 
 	if (argc < 2)
-		return(-1);
+		return (-1);
 	ft_check_args(argc, argv);
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	stack_b = (t_list **)malloc(sizeof(t_list));
 	*stack_a = NULL;
 	*stack_b = NULL;
-	initStack(stack_a, argc, argv);
+	initstack(stack_a, argc, argv);
 	if (is_sorted(stack_a) == 1)
 	{
 		free_stack(stack_a);
@@ -65,7 +65,6 @@ int	main(int argc, char *argv[])
 		return (0);
 	}
 	sort_stack(stack_a, stack_b);
-	printList(*stack_a);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);

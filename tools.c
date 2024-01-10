@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:41:44 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/09 13:16:22 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 15:34:17 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
-void ft_error(char *message)
+void	ft_error(char *message)
 {
-    printf("%s", message);
-    exit(0);
+	printf("%s", message);
+	exit(0);
 }
 
 void	ft_free(char **str)
@@ -27,6 +27,7 @@ void	ft_free(char **str)
 		i++;
 	while (i >= 0)
 		free(str[i--]);
+	free(str);
 }
 
 void	free_stack(t_list **stack)
@@ -44,18 +45,6 @@ void	free_stack(t_list **stack)
 	free(stack);
 }
 
-void	printList(t_list *head)
-{
-	t_list	*tmp;
-
-	tmp = head;
-	while (tmp != NULL)
-	{
-		printf("%d ", tmp->donne);
-		tmp = tmp->suivant;
-	}
-}
-
 int	ft_lstsize(t_list *head)
 {
 	size_t	i;
@@ -69,4 +58,15 @@ int	ft_lstsize(t_list *head)
 		i++;
 	}
 	return (i);
+}
+
+void	part2_sort_3(t_list **stack_a, t_list *head, int min)
+{
+	if (head->suivant->index == min)
+		r(stack_a, 'a');
+	else
+	{
+		s(stack_a, 'a');
+		rr(stack_a, 'a');
+	}
 }

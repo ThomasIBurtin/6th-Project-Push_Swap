@@ -16,10 +16,10 @@ NAME = push_swap
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -o $(NAME) $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC)  -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

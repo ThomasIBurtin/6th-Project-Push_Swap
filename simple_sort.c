@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:11:45 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/09 13:56:12 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 14:19:35 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
-static int	get_min(t_list **stack, int val)
+int	get_min(t_list **stack, int val)
 {
 	t_list	*head;
 	int		min;
@@ -28,7 +28,7 @@ static int	get_min(t_list **stack, int val)
 	return (min);
 }
 
-static void	sort_3(t_list **stack_a)
+void	sort_3(t_list **stack_a)
 {
 	t_list	*head;
 	int		min;
@@ -53,18 +53,10 @@ static void	sort_3(t_list **stack_a)
 			rr(stack_a, 'a');
 	}
 	else
-	{
-		if (head->suivant->index == min)
-			r(stack_a, 'a');
-		else
-		{
-			s(stack_a, 'a');
-			rr(stack_a, 'a');
-		}
-	}
+		part2_sort_3(stack_a, head, min);
 }
 
-static void	sort_4(t_list **stack_a, t_list **stack_b)
+void	sort_4(t_list **stack_a, t_list **stack_b)
 {
 	int	distance;
 

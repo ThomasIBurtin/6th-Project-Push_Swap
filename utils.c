@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:52:33 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/09 00:59:44 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 14:30:34 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ t_list	*ft_lstnew(int value)
 
 int	is_sorted(t_list **stack)
 {
-	t_list *head;
+	t_list	*head;
 
 	head = *stack;
 	while (head->suivant != NULL)

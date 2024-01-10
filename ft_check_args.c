@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chek_args.c                                     :+:      :+:    :+:   */
+/*   ft_check_args.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:41:53 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/08 13:37:46 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 15:28:07 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
+#include <stdio.h>
 
 int	ft_contains(int num, char **argv, int i)
 {

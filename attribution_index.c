@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 01:44:42 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/09 01:57:16 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/10 13:48:17 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static t_list	*get_next_min(t_list **stack)
 	min = NULL;
 	has_min = 0;
 	head = *stack;
-    while (head != NULL)
+	while (head != NULL)
 	{
 		if ((head->index == -1) && (has_min == 0 || head->donne < min->donne))
 		{
@@ -44,6 +44,6 @@ void	attribution_index(t_list **stack)
 	{
 		head->index = index;
 		head = get_next_min(stack);
-        index++;
+		index++;
 	}
 }
