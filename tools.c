@@ -6,15 +6,17 @@
 /*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:41:44 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/10 15:34:17 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/12 17:30:35 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
-void	ft_error(char *message)
+void	ft_error(char *message, int argc, char *args[])
 {
 	printf("%s", message);
+	if (argc == 2)
+		ft_free(args);
 	exit(0);
 }
 

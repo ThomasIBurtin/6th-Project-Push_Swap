@@ -6,7 +6,7 @@
 /*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:41:53 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/10 15:28:07 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/12 17:29:39 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ void	ft_check_args(int argc, char **argv)
 	{
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]))
-			ft_error("Error");
+			ft_error("Error", argc, args);
 		if (ft_contains(tmp, args, i))
-			ft_error("Error");
+			ft_error("Error", argc, args);
 		if (tmp < -2147483648 || tmp > 2147483647)
-			ft_error("Error");
+			ft_error("Error", argc, args);
 		i++;
 	}
 	if (argc == 2)

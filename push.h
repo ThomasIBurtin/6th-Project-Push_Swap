@@ -6,7 +6,7 @@
 /*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:16:04 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/10 15:45:07 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/12 17:30:54 by tburtin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	r(t_list **premiere_case, char c);
 void	rr(t_list **premiere_case, char c);
 
 void	ft_check_args(int argc, char **argv);
-void	ft_error(char *message);
+void	ft_error(char *message, int argc, char *args[]);
 void	ft_free(char **str);
 void	free_stack(t_list **stack);
 void	ft_lstadd_back(t_list **stack, t_list *new);
