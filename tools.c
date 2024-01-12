@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:41:44 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/12 17:30:35 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/12 19:42:55 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_error(char *message, int argc, char *args[])
 {
-	printf("%s", message);
+	printf("%s\n", message);
 	if (argc == 2)
 		ft_free(args);
 	exit(0);

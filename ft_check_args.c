@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_args.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:41:53 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/12 17:29:39 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/12 19:09:21 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_contains(int num, char **argv, int i)
 	while (argv[i])
 	{
 		if (ft_atoi(argv[i]) == num)
-			return (1);
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 int	ft_isnum(char *num)
@@ -30,8 +30,12 @@ int	ft_isnum(char *num)
 	int	i;
 
 	i = 0;
-	if (num[0] == '-')
-		i++;
+	if (num[i] == '-')
+		{
+			i++;
+			if (!(num[i] >= '0' && num[i] <= '9'))
+				return (0);
+		}
 	while (num[i])
 	{
 		if (!(num[i] >= '0' && num[i] <= '9'))
@@ -58,9 +62,9 @@ void	ft_check_args(int argc, char **argv)
 	while (args[i])
 	{
 		tmp = ft_atoi(args[i]);
-		if (!ft_isnum(args[i]))
+		if (ft_isnum(args[i]) == 0)
 			ft_error("Error", argc, args);
-		if (ft_contains(tmp, args, i))
+		if (ft_contains(tmp, args, i) == 0)
 			ft_error("Error", argc, args);
 		if (tmp < -2147483648 || tmp > 2147483647)
 			ft_error("Error", argc, args);

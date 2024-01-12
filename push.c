@@ -3,14 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:59:24 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/12 17:32:06 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/12 19:40:06 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
+
+void	ft_check_empty(char *str)
+{
+	int	i;
+	int result;
+
+	i = 0;
+	result = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)))
+			result = 1;
+		i++;
+	}
+	if (result == 0)
+		exit(0);
+}
 
 void	initstack(t_list **stack, int argc, char **argv)
 {
@@ -52,6 +69,8 @@ int	main(int argc, char *argv[])
 
 	if (argc < 2)
 		return (-1);
+	if (argc == 2)
+		ft_check_empty(argv[1]);
 	ft_check_args(argc, argv);
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	stack_b = (t_list **)malloc(sizeof(t_list));
