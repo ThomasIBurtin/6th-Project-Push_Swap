@@ -13,18 +13,23 @@ SRC = commande.c \
 OBJ = $(SRC:.c=.o)
 NAME = push_swap
 
-all: $(NAME)
+all: fonc_printf $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) printf/*.o
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+fonc_printf:
+	$(MAKE) -C printf
+
 clean:
 	rm -f $(OBJ)
+	$(MAKE) clean -C printf
 
 fclean: clean
 	rm -f $(NAME)
+	$(MAKE) fclean -C printf
 
 re: fclean all

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tburtin <tburtin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:16:04 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/12 17:30:54 by tburtin          ###   ########.fr       */
+/*   Updated: 2024/01/13 12:12:48 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_H
 
 # include <stdlib.h>
-# include <stdio.h>
+# include "printf/ft_printf.h"
 
 typedef struct s_list
 {
@@ -29,7 +29,7 @@ void	r(t_list **premiere_case, char c);
 void	rr(t_list **premiere_case, char c);
 
 void	ft_check_args(int argc, char **argv);
-void	ft_error(char *message, int argc, char *args[]);
+void	ft_error(int argc, char *args[]);
 void	ft_free(char **str);
 void	free_stack(t_list **stack);
 void	ft_lstadd_back(t_list **stack, t_list *new);

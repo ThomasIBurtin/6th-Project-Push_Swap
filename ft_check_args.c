@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 22:41:53 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/12 19:09:21 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/13 12:10:38 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,11 @@ void	ft_check_args(int argc, char **argv)
 	{
 		tmp = ft_atoi(args[i]);
 		if (ft_isnum(args[i]) == 0)
-			ft_error("Error", argc, args);
+			ft_error(argc, args);
 		if (ft_contains(tmp, args, i) == 0)
-			ft_error("Error", argc, args);
+			ft_error(argc, args);
 		if (tmp < -2147483648 || tmp > 2147483647)
-			ft_error("Error", argc, args);
+			ft_error(argc, args);
 		i++;
 	}
 	if (argc == 2)

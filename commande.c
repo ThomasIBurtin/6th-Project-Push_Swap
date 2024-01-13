@@ -6,7 +6,7 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:33:24 by tburtin           #+#    #+#             */
-/*   Updated: 2024/01/09 13:57:54 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/13 12:13:28 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	s(t_list **premiere_case, char c)
 	deuxieme->suivant = *premiere_case;
 	*premiere_case = deuxieme;
 	if (c == 'a')
-		printf("%s", "sa\n");
+		ft_printf("%s", "sa\n");
 	if (c == 'b')
-		printf("%s", "sb\n");
+		ft_printf("%s", "sb\n");
 }
 
 void	p(t_list **premiere_case_a, t_list **premiere_case_b, char c)
@@ -35,9 +35,9 @@ void	p(t_list **premiere_case_a, t_list **premiere_case_b, char c)
 	*premiere_case_b = *premiere_case_a;
 	*premiere_case_a = sauvegarde;
 	if (c == 'a')
-		printf("%s", "pa\n");
+		ft_printf("%s", "pa\n");
 	if (c == 'b')
-		printf("%s", "pb\n");
+		ft_printf("%s", "pb\n");
 }
 
 void	r(t_list **premiere_case, char c)
@@ -52,9 +52,9 @@ void	r(t_list **premiere_case, char c)
 	dernier = dernier->suivant;
 	dernier->suivant = NULL;
 	if (c == 'a')
-		printf("%s", "ra\n");
+		ft_printf("%s", "ra\n");
 	if (c == 'b')
-		printf("%s", "rb\n");
+		ft_printf("%s", "rb\n");
 }
 
 void	rr(t_list **premiere_case, char c)
@@ -72,7 +72,7 @@ void	rr(t_list **premiere_case, char c)
 	*premiere_case = dernier;
 	avant_dernier->suivant = NULL;
 	if (c == 'a')
-		printf("%s", "rra\n");
+		ft_printf("%s", "rra\n");
 	if (c == 'b')
-		printf("%s", "rrb\n");
+		ft_printf("%s", "rrb\n");
 }

@@ -6,15 +6,15 @@
 /*   By: transfo <transfo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:41:44 by transfo           #+#    #+#             */
-/*   Updated: 2024/01/12 19:42:55 by transfo          ###   ########.fr       */
+/*   Updated: 2024/01/13 12:20:39 by transfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push.h"
 
-void	ft_error(char *message, int argc, char *args[])
+void	ft_error(int argc, char *args[])
 {
-	printf("%s\n", message);
+	ft_printf("%s", "Erreur\n");
 	if (argc == 2)
 		ft_free(args);
 	exit(0);
